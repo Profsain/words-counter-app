@@ -10,15 +10,6 @@ class WordCounter {
         this.emitEvent(wordStat)
     }
 
-    // count characters and word
-    getWordsStat(str) {
-        let matches = str.match(/\S+/g);
-        return {
-            characters: str.length,
-            words: matches.length
-        }  
-    }
-
     // custom event to handle exposing word stat
     emitEvent(wordStat) {
         // create count event
@@ -31,5 +22,14 @@ class WordCounter {
         });
         // dispatch count event
         this.inputText.dispatchEvent(countEvent);
+    }
+
+    // count characters and word
+    getWordsStat(str) {
+        let matches = str.match(/\S+/g);
+        return {
+            characters: str.length,
+            words: matches ? matches.length : 0
+        }  
     }
 }
