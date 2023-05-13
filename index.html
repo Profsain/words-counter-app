@@ -11,16 +11,17 @@
     <main>
         <div class="container">
             <h1>Words Counter</h1>
-            <form action="includes/words-counter.inc.php" method="POST">
-                <textarea name="text" id="text" cols="30" rows="10" placeholder="Enter your text here..."></textarea>
-                <button type="submit" name="submit">Count Words</button>
-            </form>
-        </div>
-        <div class="stat">
-            You have written <span id="words">0</span> words and <span id="characters">0</span> characters.
+            <div>
+                <textarea name="text" id="text" cols="60" rows="20" placeholder="Enter your text here..."></textarea>
+                <pre id="showText"></pre>
+            </div>
+            <div class="stat">
+                You have written <span id="words">0</span> words and <span id="characters">0</span> characters.
+            </div>
         </div>
     </main>
 
+    <script src="scripts/counter.js"></script>
     <script src="scripts/app.js"></script>
 </body>
 </html>
