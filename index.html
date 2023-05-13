@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words Counter</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Words Counter</h1>
+            <form action="includes/words-counter.inc.php" method="POST">
+                <textarea name="text" id="text" cols="30" rows="10" placeholder="Enter your text here..."></textarea>
+                <button type="submit" name="submit">Count Words</button>
+            </form>
+        </div>
+        <div class="stat">
+            You have written <span id="words">0</span> words and <span id="characters">0</span> characters.
+        </div>
+    </main>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
