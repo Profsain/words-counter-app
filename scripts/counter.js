@@ -1,12 +1,14 @@
 class WordCounter {
     constructor(inputText) {
         this.inputText = inputText;
-        this.inputText.addEventListener('input', this.count)
+        this.inputText.addEventListener('input', () => {
+            this.count();
+        });
     }
 
     // count method
     count() {
-        let wordStat = this.getWordsStat(this.innerText.value.trim());
+        let wordStat = this.getWordStat(this.inputText.value.trim());
         this.emitEvent(wordStat)
     }
 
@@ -25,7 +27,7 @@ class WordCounter {
     }
 
     // count characters and word
-    getWordsStat(str) {
+    getWordStat(str) {
         let matches = str.match(/\S+/g);
         return {
             characters: str.length,
